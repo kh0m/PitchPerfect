@@ -15,10 +15,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="o34-0i-BCl">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="o34-0i-BCl">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtQ-ds-IHh">
                                         <state key="normal" image="recordButton"/>
@@ -42,8 +42,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="o34-0i-BCl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1yZ-fo-u5e"/>
-                            <constraint firstItem="o34-0i-BCl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qAw-Lm-ANp"/>
+                            <constraint firstItem="o34-0i-BCl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ehG-ck-7Pw"/>
+                            <constraint firstItem="o34-0i-BCl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="165" id="iaH-df-Olh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Atx-T8-vWy"/>
@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934" y="-131"/>
+            <point key="canvasLocation" x="933.60000000000002" y="-131.78410794602701"/>
         </scene>
         <!--Play Sounds View Controller-->
         <scene sceneID="6dX-Se-TB3">
@@ -67,7 +67,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Z9I-N7-dnE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zS9-rP-d2D">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZIR-BN-PnX">
@@ -135,10 +135,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ZIR-BN-PnX" secondAttribute="trailing" id="3Yg-NF-rpm"/>
-                            <constraint firstItem="ZIR-BN-PnX" firstAttribute="top" secondItem="RA0-Ie-bj1" secondAttribute="bottom" id="5pi-4d-4ja"/>
-                            <constraint firstItem="ZIR-BN-PnX" firstAttribute="leading" secondItem="zS9-rP-d2D" secondAttribute="leading" id="jup-1Z-wNN"/>
-                            <constraint firstItem="ZIR-BN-PnX" firstAttribute="bottom" secondItem="Z9I-N7-dnE" secondAttribute="top" id="vDj-Gq-pts"/>
+                            <constraint firstItem="ZIR-BN-PnX" firstAttribute="bottom" secondItem="Z9I-N7-dnE" secondAttribute="top" id="6pG-V1-C1Y"/>
+                            <constraint firstItem="ZIR-BN-PnX" firstAttribute="leading" secondItem="zS9-rP-d2D" secondAttribute="leading" id="KML-Xh-cZL"/>
+                            <constraint firstAttribute="trailing" secondItem="ZIR-BN-PnX" secondAttribute="trailing" id="dMr-rh-Ieu"/>
+                            <constraint firstItem="ZIR-BN-PnX" firstAttribute="top" secondItem="RA0-Ie-bj1" secondAttribute="bottom" id="oGq-8j-JR1"/>
                         </constraints>
                     </view>
                     <connections>
