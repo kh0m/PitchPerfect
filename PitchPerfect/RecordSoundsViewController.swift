@@ -16,11 +16,16 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordButton: UIButton!
     
     var audioRecorder: AVAudioRecorder!
+    enum RecordingState { case recording, notRecording }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        stopRecordingButton.isEnabled = false
+    }
     
     @IBAction func recordButtonPressed(_ sender: UIButton) {
-        recordingLabel.text = "Recording in Progress"
-        stopRecordingButton.isEnabled = true
-        recordButton.isEnabled = false
+        configureUI(.recording)
         
         // setup file save location
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
@@ -28,8 +33,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
         var filePath = URL(fileURLWithPath: dirPath)
         filePath.appendPathComponent(recordingName)
-        
-        print(filePath)
         
         // create a new recording session
         let session = AVAudioSession.sharedInstance()
@@ -44,20 +47,23 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopButtonPressed(_ sender: UIButton) {
-        recordingLabel.text = "Tap to Record"
-        stopRecordingButton.isEnabled = false
-        recordButton.isEnabled = true
+        configureUI(.notRecording)
+        
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
     }
     
-    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        print("AVAudioRecorder finished saving recording")
-        if (flag) {
-            self.performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
-        } else {
-            print("Saving of recording failed.")
+    func configureUI(_ recordState: RecordingState) {
+        switch recordState {
+        case .recording:
+            recordingLabel.text = "Recording in Progress"
+            stopRecordingButton.isEnabled = true
+            recordButton.isEnabled = false
+        case .notRecording:
+            recordingLabel.text = "Tap to Record"
+            stopRecordingButton.isEnabled = false
+            recordButton.isEnabled = true
         }
     }
     
@@ -69,17 +75,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        stopRecordingButton.isEnabled = false
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        if flag {
+            self.performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
+        } else {
+            print("Saving of recording failed.")
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
