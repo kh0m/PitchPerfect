@@ -42,8 +42,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="o34-0i-BCl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ehG-ck-7Pw"/>
-                            <constraint firstItem="o34-0i-BCl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="165" id="iaH-df-Olh"/>
+                            <constraint firstItem="o34-0i-BCl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n8a-O8-L5D"/>
+                            <constraint firstItem="o34-0i-BCl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="165" id="wRj-FA-C1W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Atx-T8-vWy"/>
@@ -135,10 +135,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ZIR-BN-PnX" firstAttribute="bottom" secondItem="Z9I-N7-dnE" secondAttribute="top" id="6pG-V1-C1Y"/>
-                            <constraint firstItem="ZIR-BN-PnX" firstAttribute="leading" secondItem="zS9-rP-d2D" secondAttribute="leading" id="KML-Xh-cZL"/>
-                            <constraint firstAttribute="trailing" secondItem="ZIR-BN-PnX" secondAttribute="trailing" id="dMr-rh-Ieu"/>
-                            <constraint firstItem="ZIR-BN-PnX" firstAttribute="top" secondItem="RA0-Ie-bj1" secondAttribute="bottom" id="oGq-8j-JR1"/>
+                            <constraint firstItem="ZIR-BN-PnX" firstAttribute="bottom" secondItem="Z9I-N7-dnE" secondAttribute="top" id="3d3-mb-fJy"/>
+                            <constraint firstItem="ZIR-BN-PnX" firstAttribute="top" secondItem="RA0-Ie-bj1" secondAttribute="bottom" id="NaQ-Gm-vxY"/>
+                            <constraint firstAttribute="trailing" secondItem="ZIR-BN-PnX" secondAttribute="trailing" id="R3K-fg-gcX"/>
+                            <constraint firstItem="ZIR-BN-PnX" firstAttribute="leading" secondItem="zS9-rP-d2D" secondAttribute="leading" id="m99-bH-ZQ2"/>
                         </constraints>
                     </view>
                     <connections>
